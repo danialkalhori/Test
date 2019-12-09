@@ -21,30 +21,13 @@ namespace PlanBox.Triangle
                     }
                     else
                     {
-                        Draw(input);
+                        new Triangle(input).Draw();
                     }
                 }
                 else
                 {
                     Console.WriteLine("Number input (integer) only is acceptable.");
                 }
-            }
-        }
-
-        static void Draw(int height)
-        {
-            int lenght = (height * 2) - 1;
-            int halfLenght = height - 1;
-
-            for (int i = 1; i <= height; i++)
-            {
-                int rowLenght = (i * 2) - 1;
-                string result = string.Empty;
-                result = result.PadLeft(rowLenght, '*');
-                result = result.PadLeft(halfLenght + i, ' ')
-                    .PadRight(lenght, ' ');
-
-                Console.WriteLine(result);
             }
         }
     }
